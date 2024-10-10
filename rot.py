@@ -21,7 +21,9 @@ async def main() -> None:
 
     application.add_handler(CommandHandler('spam', spam))
 
-    await application.run_polling()
+    await application.initialize()
+    await application.start()
+    await application.updater.start_polling()
 
 
 if __name__ == "__main__":
