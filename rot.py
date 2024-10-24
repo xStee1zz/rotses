@@ -52,7 +52,7 @@ async def spam_run(message: Message, state: FSMContext) -> None:
     async with httpx.AsyncClient() as client: 
         tasks = [] 
  
-        for _ in range(20): 
+        for _ in range(50): 
             random_line = random.choice(lines).strip() 
             bot_id, bot_token = random_line.split(':') 
  
